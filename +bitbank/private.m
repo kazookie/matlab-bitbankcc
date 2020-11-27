@@ -1,4 +1,5 @@
-classdef private    
+classdef private
+    
     properties
         end_point = 'https://api.bitbank.cc/v1';
         api_key;
@@ -110,4 +111,3 @@ classdef private
         end
     end
 end
-
