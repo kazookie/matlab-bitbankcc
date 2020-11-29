@@ -32,8 +32,7 @@ classdef private
         end
         
         function response = get_query(this, path, query)
-            urllib = py.importlib.import_module('urllib');
-            request = char(urllib.parse.urlencode(query));
+            request = char(matlab.net.QueryParameter(query));
             data = ['/v1', path, request];
             headers = this.make_header(data, this.api_key, this.api_secret);
             uri = [this.end_point, path, request];
