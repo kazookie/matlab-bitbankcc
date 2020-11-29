@@ -7,7 +7,7 @@ This library is referring to [python-bitbankcc](https://github.com/bitbankinc/py
 ## Useage
 Add this project to MATLAB path.
 
-This library depends on hmac, hashlib, and urllib of python.
+This library depends on hmac and hashlib of python.
 
 ## Public API
 ```matlab
@@ -29,7 +29,7 @@ candle = pub.get_candlestick('btc_jpy', '1hour', '20201122')
 API_KEY = 'Your API key'
 API_SECRET = 'Your API secret'
 
-prv = bitbank.private()
+prv = bitbank.private(API_KEY, API_SECRET)
 
 assets = prv.get_asset()
 
